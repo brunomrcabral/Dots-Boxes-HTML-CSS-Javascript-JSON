@@ -1,117 +1,206 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="pagina_entrada_stylesheet.css"> 
-		<!--<script type="text/javascript" src="password.js"> </script>-->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-		<script type="text/javascript" src="display.js"></script> 
-		<script type="text/javascript" src="jogo_funcionalidades.js"> </script>
-		<script type="text/javascript" src="jogo_display.js"> </script>
-	
-		<title>Dots and Boxes</title>
-		
-    </head>
-    
-    <body onload="show_inicial( )">
-    
-		<!-- TITULO -->
-		<div id="title">
-			<H1> Dots and Boxes</H1>
-		</div>	
-		
 
-		<!-- LOGIN -->	
-		<div id="login">
-			<form> 
-                <input name="userid" type="text" placeholder="Username" /> 
-                   
-                <input name="pswrd" type="password" placeholder="Password" />
-                    
-                <input  type="submit" value="Login" onclick="check(this.form)"/>
-            </form> 
-        </div>
-        
+<head>
+	<title>Dots and Boxes</title>
+	<meta charset="UTF-8">
+	<link type="text/css" rel="stylesheet" href="pagina_entrada_stylesheet.css" />
+	<script type="text/javascript" src="jogo_javascript.js"></script>
+	<script type="text/javascript" src="display.js"></script>
+	<script type="text/javascript" src="funcoes.js"></script>
+</head>
 
-        <!-- DIFICULDADE -->
-        <div id="dif">
-			<H3 id="m">MODO</H3>
-			<button id="online">Online</button>
-			<button id="offline">Offline</button>
-			
-			<H3 id="d">DIFICULDADE</H3>
-			<button id="begginer" onclick="show_begginer();getInput(2,3);startTimer(0)">Begginer<br>2X3</button>
-			<button id="intermediate" onclick="show_intermediate();getInput(4,5);startTimer(0)">Intermediate<br>4X5</button>
-			<button id="advanced" onclick="show_advanced();getInput(6,8);startTimer(0)">Advanced <br>6X8</button>
-			<button id="expert" onclick="show_expert();getInput(9,11);startTimer(0)">Expert<br>9X11</button>
-        
-        </div>
-        
 
-        <!-- TABELA -->
-        <div id="rank">
-			<H3>Quadro de Honra</H3>
-		
-        </div>
-        
+<body onload="init();my_show(); opp_show(); show_game();">
 
-        <!-- TABULEIRO de Jogo -->
-        <div id="jogo">
-        	<div id="img">
-        		<H3>Quadro de Honra</H3>
-				<table style="width:100%">
-				  <tr>
-					<th></th>
-				    <th>Begginer</th>
-				    <th>Intermediate</th>
-				    <th>Advanced</th>
-					<th>Expert</th>
-					<th>Total</th>
-				  </tr>
-				  <tr>
-				    <td>Bruno</td>
-				    <td>X</td>
-				    <td>X</td>
-				    <td>X</td>
-				    <td>X</td>
-				    <td>X+X+X+X</td>	
-				  </tr>
-				  <tr>
-				    <td>Ricardo</td>
-				    <td>X</td>
-				    <td>X</td>
-				    <td>X</td>
-				    <td>X</td>
-				    <td>X+X+X+X</td>
-				  </tr>
-				  <tr>
-				    <td>Utilizador</td>
-				    <td>X</td>
-				    <td>X</td>
-				    <td>X</td>
-				    <td>X</td>
-				    <td>X+X+X+X</td>
-				  </tr>
-				</table>
-        	</div>
+	<div id="title">
+		<h1>Dots and Boxes</h1>
+	</div>
 
-			<div id="tabuleiro_begginer">
-		
-			</div>
-			
-			<div id="tabuleiro_intermediate">
-			
-			</div>
-			
-			<div id="tabuleiro_advanced">
-			
-			</div>
-			
-			<div id="tabuleiro_expert">
+	<div id="authentication">
+		<form id="authentication_form">
+			<input class="input_text" type="text" name="user" size="10" id="input_text_id"/>
+			<input class="input_password" type="password" name="pass" size="10" />
+			<input type="button" onclick="register(this.form)" value="Log In"/><br />
+		</form>
+	</div>
 
-			</div>
-        </div>  
-        
-	</body>
-	
+
+	<!-- Menu com hover -->
+	<div id="menu_nav">
+
+		<H3 id="m">MODO</H3>
+		<button id="online" onclick="show_dif_Online()">Online</button>
+		<button id="rank" onclick="show_rank()">Rank</button>
+
+		<H3 id="d">DIFICULDADE</H3>
+		<button id="begginer" onclick="clean();start(1,2)">Beginner<br>2X3</button>
+		<button id="intermediate" onclick="clean();start(2,2)">Intermediate<br>4X5</button>
+		<button id="advanced" onclick="clean();start(3,2)">Advanced<br>6X8</button>
+		<button id="expert" onclick="clean();start(4,2)">Expert<br>9X11</button>
+
+	</div>
+
+	<!--***Online beginer table***-->
+	<div id="beg_online">
+		<table id="beg">
+			<tbody>
+				<tr>
+					<td> <b>Player</b>  </td>
+					<td> <b>Points</b>  </td>
+					<td> <b>Time(s)</b>  </td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<!--***Online intermediate table***-->
+	<div id="int_online">
+		<table id="int">
+			<tbody>
+				<tr>
+					<td> <b>Player</b>  </td>
+					<td> <b>Points</b>  </td>
+					<td> <b>Time(s)</b>  </td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+
+	<!--***Online advance table***-->
+	<div id="adv_online">
+		<table id="adv">
+			<tbody>
+				<tr>
+					<td> <b>Player</b>  </td>
+					<td> <b>Points</b>  </td>
+					<td> <b>Time(s)</b>  </td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<!--***Online exepert table***-->
+	<div id="exp_online">
+		<table id="exp">
+			<tbody>
+				<tr>
+					<td> <b>Player</b>  </td>
+					<td> <b>Points</b>  </td>
+					<td> <b>Time(s)</b>  </td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+
+
+	<div id="dif_Online">
+		<form id="fm2">
+			<select id="level">
+				<option value="beginner">Beginner</option>
+				<option value="intermediate">Intermediate</option>
+				<option value="advanced">Advanced</option>
+				<option value="expert">Expert</option>
+			</select>
+
+			<input id="group" name="group" placeholder="Group">
+
+			<button type="button" value="join" onclick="join(this.form)">JOIN</button>
+			<button type="button" value="Leave" onclick="show_game();leave()">LEAVE</button>
+			<button type="button" value="ranking" onclick="show_rank_online();ranking(this.form)">Ranking</button>
+		</form>
+	</div>
+
+	<!--********ScoreBoard********-->
+	<div id="scoreboard">
+		<!--table begginer-->
+		<H3>Beginner scoreboard</H3>
+		<table id="beginner_scoreboard">
+			<tbody>
+				<tr>
+					<td> <b>Player</b>  </td>
+					<td> <b>Points</b>  </td>
+					<td> <b>Time(s)</b>  </td>
+				</tr>
+			</tbody>
+		</table>
+
+		<br />
+
+		<!--table intermidiate-->
+		<H3>Intermediate scoreboard</H3>
+		<table id="intermediate_scoreboard">
+			<tbody>
+				<tr>
+					<td> <b>Player</b>  </td>
+					<td> <b>Points</b>  </td>
+					<td> <b>Time(s)</b>  </td>
+				</tr>
+			</tbody>
+		</table>
+
+		<br />
+
+		<!--table advanced-->
+		<H3>Advanced scoreboard</H3>
+		<table id="advanced_scoreboard">
+			<tbody>
+				<tr>
+					<td> <b>Player</b>  </td>
+					<td> <b>Points</b>  </td>
+					<td> <b>Time(s)</b>  </td>
+				</tr>
+			</tbody>
+		</table>
+
+		<br />
+
+		<!--table expert-->
+		<H3>Expert scoreboard</H3>
+		<table id="expert_scoreboard">
+			<tbody>
+				<tr>
+					<td> <b>Player</b>  </td>
+					<td> <b>Points</b>  </td>
+					<td> <b>Time(s)</b>  </td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<!--*********Game Board*********-->
+
+
+	<div id="game_div">
+		<canvas id="myCanvas" width="980" height="600"></canvas>
+	</div>
+
+	<!-- auxiliar -->
+	<div id="winner">
+		<span id="span_winner"></span>
+	</div>
+
+
+	<!--*********Div_information*********-->
+	<div id="div_time" >
+		<!--TIME-->
+		<div id="time">
+			Time(You): <span id="my_time"></span> 
+			<br><br>
+			Time(Opponent): <span id="opponents_time"></span>
+		</div>
+
+		<div id="boxes">
+			Caixas Utilizador: <span id="span_my_boxes">0</span>
+			<br><br>
+			Caixas Oponente: <span id="span_opponent_boxes">0</span>
+		</div>
+
+		<button id="reset" value="Give up" onclick="show_game()">Inicio</button>
+	</div>
+
+</body>
+
 </html>

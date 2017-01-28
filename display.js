@@ -1,70 +1,58 @@
-function show_inicial(){	
-	title.style.display = "";
-  login.style.display = "";
-  dif.style.display ="";
-  jogo.style.display = "";
-  //info.style.display = "";
-  img.style.display = "";
-  tabuleiro_begginer.style.display = "none";
-  tabuleiro_intermediate.style.display = "none";
-  tabuleiro_advanced.style.display = "none";
-  tabuleiro_expert.style.display = "none";
-  rank.style.display = "none";
+
+function show_game(){
+	game_div.style.display="";
+	scoreboard.style.display="none";
+	dif_Online.style.display="none";
+	beg_online.style.display="none";
+	int_online.style.display="none";
+	adv_online.style.display="none";
+	exp_online.style.display="none";
+	menu_nav.style.display="";
 }
 
-function show_begginer(){	
-  title.style.display = "";
-  login.style.display = "";
-  dif.style.display = "none";
-  jogo.style.display = "";
-  //info.style.display = "";
-  img.style.display = "none";
-  tabuleiro_begginer.style.display = "";
-  tabuleiro_intermediate.style.display = "none";
-  tabuleiro_advanced.style.display = "none";
-  tabuleiro_expert.style.display = "none";
-  rank.style.display = "";
+function show_rank(){
+	beg_online.style.display="none";
+	int_online.style.display="none";
+	adv_online.style.display="none";
+	exp_online.style.display="none";
+	menu_nav.style.display="";
+	if(document.getElementById("scoreboard").style.display=="none"){
+		document.getElementById("scoreboard").style.display="";
+		document.getElementById("game_div").style.display="none";
+		document.getElementById("dif_Online").style.display="none";
+
+	}
+	else {
+		document.getElementById("scoreboard").style.display="none";
+		document.getElementById("game_div").style.display="";
+	}
+
+}
+function show_rank_online(){
+	game_div.style.display="none";
+	
+	scoreboard.style.display="none";
+	dif_Online.style.display="";
+	menu_nav.style.display="none";
+	beg_online.style.display="none";
+	int_online.style.display="none";
+	adv_online.style.display="none";
+	exp_online.style.display="none";
+	menu_nav.style.display="none";
+}
+function show_dif_Online(){
+	game_div.style.display="";
+	scoreboard.style.display="none";
+	dif_Online.style.display="";
+	menu_nav.style.display="none";
+	beg_online.style.display="none";
+	int_online.style.display="none";
+	adv_online.style.display="none";
+	exp_online.style.display="none";
+	menu_nav.style.display="none";
+	
 }
 
-function show_intermediate(){ 
-  title.style.display = "";
-  login.style.display = "";
-  dif.style.display = "none";
-  jogo.style.display = "";
-  //info.style.display = "";
-  img.style.display = "none";
-  tabuleiro_begginer.style.display = "none";
-  tabuleiro_intermediate.style.display = "";
-  tabuleiro_advanced.style.display = "none";
-  tabuleiro_expert.style.display = "none";
-  rank.style.display = "";
-}
 
-function show_advanced(){ 
-  title.style.display = "";
-  login.style.display = "";
-  dif.style.display = "none";
-  jogo.style.display = "";
-  //info.style.display = "";
-  img.style.display = "none";
-  tabuleiro_begginer.style.display = "none";
-  tabuleiro_intermediate.style.display = "none";
-  tabuleiro_advanced.style.display = "";
-  tabuleiro_expert.style.display = "none";
-  rank.style.display = "";
-}
 
-function show_expert(){ 
-  title.style.display = "";
-  login.style.display = "";
-  dif.style.display = "none";
-  jogo.style.display = "";
-  //info.style.display = "";
-  img.style.display = "none";
-  tabuleiro_begginer.style.display = "none";
-  tabuleiro_intermediate.style.display = "none";
-  tabuleiro_advanced.style.display = "none";
-  tabuleiro_expert.style.display = "";
-  rank.style.display = "";
-}
 

@@ -1,11 +1,16 @@
-body{
-	/*background-color: #ff8533	;*/
-	background-color: #8CC63F;
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/**********************************************************/
+
+h1{
+	font-size: 150%;
 }
 
-
-H1{
-	font-size: 150%;
+body{
+	background-color: #8CC63F;
 }
 
 H3{
@@ -26,137 +31,11 @@ H3#d{
 	font-size: 23px;
 }
 
-/*---------------------------------------------------------------------------*/
-/*DIV TITLO*/
-#title{
-	position : absolute;
-	/*border: 1px solid green;*/
-	top: 2%;
-	left: 1%;
-	height: 17%;
-	width: 25%;	
-	text-align:center;
-	font-size: 25px;
-	background-color: #bfbfbf;
-	border-radius: 25px;
-	box-shadow: 0px 0px 10px black ;
-}
-
-/*DIV  DIFICULDADE*/
-#dif{
-	position : absolute;
-	/*border: 1px solid red;*/
-	top: 21%;
-	left: 1%;
-	height: 50%;
-	width: 25%;	
-	
-	background-color: #bfbfbf;
-	border-radius: 25px;
-	box-shadow: 0px 0px 10px black ;
-}
-
-/*DIV RANK*/
-
-#rank{
-	position : absolute;
-	/*border: 1px solid red;*/
-	top: 21%;
-	left: 1%;
-	height: 50%;
-	width: 25%;	
-	
-	background-color: #bfbfbf;
-	border-radius: 25px;
-	box-shadow: 0px 0px 10px black ;
-}
-
-#img_working{
-	position: absolute;
-	top : 33%;
-	left: 28%;
-}
-
-/*DIV LOGIN*/
-#login{
-	position : absolute;
-	/*border: 1px solid blue;*/
-	top: 73%;
-	left: 1%;
-	height: 25%;
-	width: 25%;
-	background-color: #bfbfbf;
-	border-radius: 25px;
-	box-shadow: 0px 0px 10px black ;
-}
-
-/*DIV JOGO*/
-#jogo{
-	position : absolute;
-	/*border: 1px solid black;*/
-	top: 2%;
-	left: 27%;
-	height: 96%;
-	width: 72%;
-	background-color: #bfbfbf;
-	border-radius: 25px;
-	box-shadow: 0px 0px 10px black ;
-	text-align:center;	
-}
-
-#img{
-	position : absolute;
-	top: 28%;
-	left: 35%;
-}
-
-
-/*DIV INFORMACAO*/
-#info{
-	position : absolute;
-	/*border: 1px solid pink;*/
-	top: 73%;
-	left: 27%;
-	height: 25%;
-	width: 72%;
-	background-color: #bfbfbf;
-	border-radius: 25px;
-	box-shadow: 0px 0px 10px black ;
-}
-
-/*-------------------TABULEIROS-------------------------------------------------------------*/
-
-#tabuleiro_begginer{
-	position: absolute;
-	top: 33%;
-	left: 42%;
-}
-
-#tabuleiro_intermediate{
-	position: absolute;
-	top: 22%;
-	left: 38%;
-}
-
-#tabuleiro_advanced{
-	position: absolute;
-	top: 7%;
-	left: 29%;
-}
-
-#tabuleiro_expert{
-	position: absolute;
-	top: 0.5%;
-	left: 23%;
-}
-
-
-
 /*--------------CAMPOS LOGIN------------------------------------------------------------------*/
-form input[name="userid"]{
+form input[name="user"]{
 		position: absolute;
 		top: 4%;
-		left: 17%;
+		left: 20%;
 		margin: 0px;
 		width: 55%;
 		box-shadow: 0px 0px 1px #000 inset;
@@ -167,10 +46,10 @@ form input[name="userid"]{
 		border-radius: 10px;
 }
 
-form input[name="pswrd"]{
+form input[name="pass"]{
 		position: absolute;
 		top: 37%;
-		left: 17%;
+		left: 20%;
 		margin: 0px;
 		width: 55%;
 		box-shadow: 0px 0px 1px #000 inset;
@@ -181,7 +60,7 @@ form input[name="pswrd"]{
 		border-radius: 10px;
 }
 
-input[type="submit"]{
+input[type="button"]{
 	position:absolute;
 	top:71%;
 	left:30%;
@@ -193,51 +72,24 @@ input[type="submit"]{
 	border-radius: 50px;
 }
 
-
-/*-----------------------Botao online/Offline-----------------------------------------------------*/
-#online{
+#usr_txt{
 	position:absolute;
-	top: 15%;
-	left:10%;
-	width: 35%;
-	height: 11%;
-	font-weight: bold;
-	font-size: 17px;
-	border-radius: 8px;	
-	color: black;
-	padding: 5px;
-	margin: 5px 5px 5px 5px;
-	border: 0px; 
-	outline: 0px;
-	/*background: inherit;*/
-	background: light grey;
-	box-shadow: 0px 0px 2px black inset;
-	
+	top:30%;
+	left:26%;
+	font-size: 30px;
+
 }
 
-#offline{
+#logout_button{	
 	position:absolute;
-	top: 15%;
-	left:54%;
-	width: 35%;
-	height: 11%;
+	top:71%;
+	left:30%;
+	padding: 10px;
+	width: 38%;
+	margin: 0px;
+	border: 1px solid black;
 	font-weight: bold;
-	font-size: 17px;
-	border-radius: 8px;
-	color: black;
-	padding: 5px;
-	margin: 5px 5px 5px 5px;
-	border: 0px; 
-	outline: 0px;
-	/*background: inherit;*/
-	background: light grey;
-	box-shadow: 0px 0px 2px black inset;	
-}
-
-#online:hover , #offline:hover{
-	/*box-shadow: 0px 0px 10px #ff8533 inset;*/
-	box-shadow: 0px 0px 10px #8CC63F inset;
-	
+	border-radius: 50px;
 }
 
 
@@ -257,7 +109,7 @@ input[type="submit"]{
 	border: 0px; 
 	outline: 0px;
 	/*background: inherit;*/
-	background: light grey;
+	background: #d3d3d3;
 	box-shadow: 0px 0px 2px black inset;	
 }
 
@@ -276,7 +128,7 @@ input[type="submit"]{
 	border: 0px; 
 	outline: 0px;
 	/*background: inherit;*/
-	background: light grey;
+	background: #d3d3d3;
 	box-shadow: 0px 0px 2px black inset;	
 }
 #advanced{
@@ -294,7 +146,7 @@ input[type="submit"]{
 	border: 0px; 
 	outline: 0px;
 	/*background: inherit;*/
-	background: light grey;
+	background: #d3d3d3;
 	box-shadow: 0px 0px 2px black inset;
 }
 
@@ -313,7 +165,7 @@ input[type="submit"]{
 	border: 0px; 
 	outline: 0px;
 	/*background: inherit;*/
-	background: light grey;
+	background: #d3d3d3;
 	box-shadow: 0px 0px 2px black inset;	
 }
 
@@ -322,14 +174,95 @@ input[type="submit"]{
 	box-shadow: 0px 0px 9px #8CC63F inset;
 }
 
+/*-----------------------Botao online/Offline-----------------------------------------------------*/
+#online{
+	position:absolute;
+	top: 15%;
+	left:10%;
+	width: 35%;
+	height: 11%;
+	font-weight: bold;
+	font-size: 17px;
+	border-radius: 8px;	
+	color: black;
+	padding: 5px;
+	margin: 5px 5px 5px 5px;
+	border: 0px; 
+	outline: 0px;
+	/*background: inherit;*/
+	background: #d3d3d3;
+	box-shadow: 0px 0px 2px black inset;
+	
+}
+
+#rank{
+	position:absolute;
+	top: 15%;
+	left:54%;
+	width: 35%;
+	height: 11%;
+	font-weight: bold;
+	font-size: 17px;
+	border-radius: 8px;
+	color: black;
+	padding: 5px;
+	margin: 5px 5px 5px 5px;
+	border: 0px; 
+	outline: 0px;
+	/*background: inherit;*/
+	background: #d3d3d3;
+	box-shadow: 0px 0px 2px black inset;	
+}
+
+#online:hover , #rank:hover{
+	/*box-shadow: 0px 0px 10px #ff8533 inset;*/
+	box-shadow: 0px 0px 10px #8CC63F inset;
+	
+}
+
+button[value="join"]{
+	position:absolute;
+	top:63%;
+	left:10%;
+	padding: 10px;
+	width: 38%;
+	margin: 0px;
+	border: 1px solid black;
+	font-weight: bold;
+	border-radius: 50px;
+}
+
+button[value="Leave"]{
+	position:absolute;
+	top:77%;
+	left:10%;
+	padding: 10px;
+	width: 38%;
+	margin: 0px;
+	border: 1px solid black;
+	font-weight: bold;
+	border-radius: 50px;
+}
+
+button[value="ranking"]{
+	position:absolute;
+	top:63%;
+	left:52%;
+	padding: 10px;
+	width: 38%;
+	margin: 0px;
+	border: 1px solid black;
+	font-weight: bold;
+	border-radius: 50px;
+}
 
 /*------------------CAMPOS INFORMACAO---------------------------------------------------*/
 #reset{
 	position:absolute;
-	top: 78%;
-	left:42%;
+	top: 23%;
+	left:68%;
 	width: 15%;
-	height: 10%;
+	height: 42%;
 	font-weight: bold;
 	font-size: 20px;
 	border-radius: 8px;	
@@ -338,14 +271,594 @@ input[type="submit"]{
 	margin: 5px 5px 5px 5px;
 	border: 0px; 
 	outline: 0px;
-	/*background: inherit;*/
-	background: light grey;
+	background: inherit;
+	background: #d3d3d3;
 	box-shadow: 0px 0px 2px black inset;
 	box-shadow: 0px 0px 10px black ;	
 }
+#dif_Online{
+	position : absolute;
+	/*border: 1px solid red;*/
+	top: 21%;
+	left: 1%;
+	height: 50%;
+	width: 25%;	
+	
+	background-color: #bfbfbf;
+	border-radius: 25px;
+	/*box-shadow: 0px 0px 10px black ;*/
+}
 
-/*--------------------------------------------------------------------------------------------*/
+#level{
+	position : absolute;
+	top: 8%;
+	left : 24%;
+	font-size : 20px;
+	background-color: #d3d3d3;
+	box-shadow : 0px 0px 3px #000 ;
+	border-radius:8px;	
+	padding : 8px;
+	margin : 10px 10px 10px 15px; 
+}
 
 
+select option{
+	color:#8CC63F;
+}
+
+#group{
+	position : absolute;
+	top : 34%;
+	left : 26%;
+	font-size : 20px;
+	background-color: #d3d3d3;
+	box-shadow : 0px 0px 4px #000 inset;
+	border : 1px solid black;
+	padding : 8px;
+	margin : 5px 10px 5px 15px; 
+	width:38%;
+	border-radius:8px;
+}
+
+ 
+ 
+/***********************************************************/
+
+#title{
+	position : absolute;
+	/*border: 1px solid green;*/
+	top: 2%;
+	left: 1%;
+	height: 19%;
+	width: 25%;	
+	text-align:center;
+	font-size: 25px;
+	background-color: #bfbfbf;
+	border-radius: 25px;
+	box-shadow: 0px 0px 10px black ;
+}
 
 
+#authentication{
+	position : absolute;
+	/*border: 1px solid blue;*/
+	top: 73%;
+	left: 1%;
+	height: 26%;
+	width: 25%;
+	background-color: #bfbfbf;
+	border-radius: 25px;
+	box-shadow: 0px 0px 10px black ;
+}
+
+
+#boxes{
+	position : absolute;
+	top: 30%;
+	left: 5%;
+	
+}
+
+/*#winner{
+  height: auto;
+  width: 15%;
+  float: right;
+  margin: 20px;
+  border: 5px;
+  border-style: solid;
+  border-color: black;
+  padding: 10px;
+  font-size:1.3vw;
+  clear: right;
+  background-color: white;
+  opacity:0.7;
+}*/
+
+#menu_nav{
+	position : absolute;
+	/*border: 1px solid red;*/
+	top: 23%;
+	left: 1%;
+	height: 48%;
+	width: 25%;	
+	
+	background-color: #bfbfbf;
+	border-radius: 25px;
+	box-shadow: 0px 0px 10px black ;
+}
+
+#dif_Online{
+	position : absolute;
+	/*border: 1px solid red;*/
+	top: 23%;
+	left: 1%;
+	height: 48%;
+	width: 25%;	
+	
+	background-color: #bfbfbf;
+	border-radius: 25px;
+	box-shadow: 0px 0px 10px black ;
+}
+
+
+#game_div{
+	position : absolute;
+	/*border: 1px solid black;*/
+	top: 2%;
+	left: 27%;
+	height: 83%;
+	width: 72%;
+	background-color: #bfbfbf;
+	border-radius: 25px;
+	box-shadow: 0px 0px 10px black ;
+	text-align:center;	
+}
+
+#game_div_canvas{
+	position : absolute;
+	/*border: 1px solid black;*/
+	top: 2%;
+	left: 27%;
+	height: 83%;
+	width: 72%;
+	background-color: #bfbfbf;
+	border-radius: 25px;
+	box-shadow: 0px 0px 10px black ;
+	text-align:center;	
+}
+
+
+#div_time{
+ 	position : absolute;
+	/*border: 1px solid pink;*/
+	top: 87%;
+	left: 27%;
+	height: 12%;
+	width: 72%;
+	background-color: #bfbfbf;
+	border-radius: 25px;
+	box-shadow: 0px 0px 10px black ;
+}
+
+#time{
+	position : absolute;
+	top: 30%;
+	left: 33%;
+}
+
+#scoreboard{
+	position : absolute;
+	/*border: 1px solid black;*/
+	top: 2%;
+	left: 27%;
+	height: 83%;
+	width: 72%;
+	background-color: #bfbfbf;
+	border-radius: 25px;
+	box-shadow: 0px 0px 10px black ;
+	text-align:center;	
+}
+#beg_online{
+	position : absolute;
+	/*border: 1px solid black;*/
+	top: 2%;
+	left: 27%;
+	height: 83%;
+	width: 72%;
+	background-color: #bfbfbf;
+	border-radius: 25px;
+	box-shadow: 0px 0px 10px black ;
+	text-align:center;	
+}
+
+#int_online{
+	position : absolute;
+	/*border: 1px solid black;*/
+	top: 2%;
+	left: 27%;
+	height: 83%;
+	width: 72%;
+	background-color: #bfbfbf;
+	border-radius: 25px;
+	box-shadow: 0px 0px 10px black ;
+	text-align:center;	
+}
+
+#adv_online{
+	position : absolute;
+	/*border: 1px solid black;*/
+	top: 2%;
+	left: 27%;
+	height: 83%;
+	width: 72%;
+	background-color: #bfbfbf;
+	border-radius: 25px;
+	box-shadow: 0px 0px 10px black ;
+	text-align:center;	
+}
+
+#exp_online{
+	position : absolute;
+	/*border: 1px solid black;*/
+	top: 2%;
+	left: 27%;
+	height: 83%;
+	width: 72%;
+	background-color: #bfbfbf;
+	border-radius: 25px;
+	box-shadow: 0px 0px 10px black ;
+	text-align:center;	
+}
+
+#ble{
+	position : absolute;
+	/*border: 1px solid black;*/
+	top: 2%;
+	left: 27%;
+	height: 83%;
+	width: 72%;
+	background-color: #bfbfbf;
+	border-radius: 25px;
+	box-shadow: 0px 0px 10px black ;
+	text-align:center;	
+}
+
+#footer{
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 30px;
+  margin: 0;
+  margin-top: 100px;
+  font-size: 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: #d3d3d3;
+}
+
+table, th, td {
+	margin-left: 40%;
+	font-size:19px;
+    border: 1px solid black;
+    background-color: #d3d3d3;
+}
+
+/*---------GAME DISPLAY---------*/
+/* BEGINNER */
+
+.inner_beginner{
+  display: inline-block;
+  width: 14.28%;
+  height: 20%;
+  border: 0px;
+  border-style: solid;
+  border-color: black;
+  cursor: pointer;
+}
+
+.dot_class_beginner{
+  display: inline-block;
+  width: 14.28%;
+  height: 20%;
+  border: 0px;
+  border-style: solid;
+  border-color: black;
+  background-image: url("dot.png");
+  background-repeat: no-repeat;
+  background-size: 50% 30%;
+  background-position:center;
+}
+
+.horz_line_beginner{
+  display: inline-block;
+  background-image: url("horz_line.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position:center;
+  width: 14.28%;
+  height: 20%;
+  border: 0px;
+  border-style: solid;
+  border-color: black;
+}
+
+.vert_line_beginner{
+  display: inline-block;
+  background-image: url("vert_line.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position:center;
+  width: 14.28%;
+  height: 20%;
+  border: 0px;
+  border-style: solid;
+  border-color: black;
+}
+
+.a_beginner{
+  display: inline-block;
+  background-image: url("vencedor1.gif");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position:center;
+  width: 14.28%;
+  height: 20%;
+  border: 0px;
+  border-style: solid;
+  border-color: black;
+}
+
+.b_beginner{
+  display: inline-block;
+  background-image: url("vencedor2.gif");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position:center;
+  width: 14.28%;
+  height: 20%;
+  border: 0px;
+  border-style: solid;
+  border-color: black;
+}
+
+/* INTERMEDIATE */
+
+.inner_intermediate{
+  display: inline-block;
+  width: 9.09%;
+  height: 10.7%;
+  border: 0px;
+  border-style: solid;
+  border-color: black;
+  cursor: pointer;
+}
+
+.dot_class_intermediate{
+  display: inline-block;
+  width: 9.09%;
+  height: 10.7%;
+  border: 0px;
+  border-style: solid;
+  border-color: black;
+  background-image: url("dot.png");
+  background-repeat: no-repeat;
+  background-size: 50% 30%;
+  background-position:center;
+}
+
+.horz_line_intermediate{
+  display: inline-block;
+  width: 9.09%;
+  height: 10.7%;
+  border: 0px;
+  border-style: solid;
+  border-color: black;
+  background-image: url("horz_line.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position:center;
+}
+
+.vert_line_intermediate{
+  display: inline-block;
+  width: 9.09%;
+  height: 10.7%;
+  border: 0px;
+  border-style: solid;
+  border-color: black;
+  background-image: url("vert_line.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position:center;
+}
+
+.a_intermediate{
+  display: inline-block;
+  width: 9.09%;
+  height: 10.7%;
+  border: 0px;
+  border-style: solid;
+  border-color: black;
+  background-image: url("vencedor1.gif");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position:center;
+}
+
+.b_intermediate{
+  display: inline-block;
+  width: 9.09%;
+  height: 10.7%;
+  border: 0px;
+  border-style: solid;
+  border-color: black;
+  background-image: url("vencedor2.gif");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position:center;
+}
+
+/* ADVANCED */
+
+.inner_advanced{
+  display: inline-block;
+  width: 5.88%;
+  height: 7.3%;
+  border: 0px;
+  border-style: solid;
+  border-color: black;
+  cursor: pointer;
+}
+
+.dot_class_advanced{
+  display: inline-block;
+  width: 5.88%;
+  height: 7.3%;
+  border: 0px;
+  border-style: solid;
+  border-color: black;
+  background-image: url("dot.png");
+  background-repeat: no-repeat;
+  background-size: 50% 30%;
+  background-position:center;
+}
+
+.horz_line_advanced{
+  display: inline-block;
+  width: 5.88%;
+  height: 7.3%;
+  border: 0px;
+  border-style: solid;
+  border-color: black;
+  background-image: url("horz_line.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position:center;
+}
+
+.vert_line_advanced{
+  display: inline-block;
+  width: 5.88%;
+  height: 7.3%;
+  border: 0px;
+  border-style: solid;
+  border-color: black;
+  background-image: url("vert_line.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position:center;
+}
+
+.a_advanced{
+  display: inline-block;
+  width: 5.88%;
+  height: 7.3%;
+  border: 0px;
+  border-style: solid;
+  border-color: black;
+  background-image: url("vencedor1.gif");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position:center;
+}
+
+.b_advanced{
+  display: inline-block;
+  width: 5.88%;
+  height: 7.3%;
+  border: 0px;
+  border-style: solid;
+  border-color: black;
+  background-image: url("vencedor2.gif");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position:center;
+}
+
+/* EXPERT */
+
+.inner_expert{
+  display: inline-block;
+  width: 4.347%;
+  height: 4.6%;
+  border: 0px;
+  margin:0px;
+  border-style: solid;
+  border-color: black;
+  cursor: pointer;
+}
+
+.dot_class_expert{
+  display: inline-block;
+  width: 4.347%;
+  height: 4.8%;
+  border: 0px;
+  border-style: solid;
+  border-color: black;
+  background-image: url("dot.png");
+  background-repeat: no-repeat;
+  background-size: 30% 30%;
+  background-position:center;
+}
+
+.horz_line_expert{
+  display: inline-block;
+  width: 4.347%;
+  height: 4.6%;
+  border: 0px;
+  border-style: solid;
+  border-color: black;
+  background-image: url("horz_line.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position:center;
+}
+
+.vert_line_expert{
+  display: inline-block;
+  width: 4.347%;
+  height: 4.6%;
+  border: 0px;
+  border-style: solid;
+  border-color: black;
+  background-image: url("vert_line.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position:center;
+}
+
+.a_expert{
+  display: inline-block;
+  width: 4.347%;
+  height: 4.6%;
+  border: 0px;
+  border-style: solid;
+  border-color: black;
+  background-image: url("vencedor1.gif");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position:center;
+}
+
+.b_expert{
+  display: inline-block;
+  width: 4.347%;
+  height: 4.6%;
+  border: 0px;
+  border-style: solid;
+  border-color: black;
+  background-image: url("vencedor2.gif");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position:center;
+}
+
+/* OTHER FUNCTIONS */
+
+.clickable_span{
+	cursor: pointer;
+}
