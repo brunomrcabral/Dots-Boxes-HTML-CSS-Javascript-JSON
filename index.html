@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="pagina_entrada_stylesheet.css"> 
+		<!--<script type="text/javascript" src="password.js"> </script>-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+		<script type="text/javascript" src="display.js"></script> 
+		<script type="text/javascript" src="jogo_funcionalidades.js"> </script>
+		<script type="text/javascript" src="jogo_display.js"> </script>
+	
+		<title>Dots and Boxes</title>
+		
+    </head>
+    
+    <body onload="show_inicial( )">
+    
+		<!-- TITULO -->
+		<div id="title">
+			<H1> Dots and Boxes</H1>
+		</div>	
+		
+
+		<!-- LOGIN -->	
+		<div id="login">
+			<form> 
+                <input name="userid" type="text" placeholder="Username" /> 
+                   
+                <input name="pswrd" type="password" placeholder="Password" />
+                    
+                <input  type="submit" value="Login" onclick="check(this.form)"/>
+            </form> 
+        </div>
+        
+
+        <!-- DIFICULDADE -->
+        <div id="dif">
+			<H3 id="m">MODO</H3>
+			<button id="online">Online</button>
+			<button id="offline">Offline</button>
+			
+			<H3 id="d">DIFICULDADE</H3>
+			<button id="begginer" onclick="show_begginer();getInput(2,3);startTimer(0)">Begginer<br>2X3</button>
+			<button id="intermediate" onclick="show_intermediate();getInput(4,5);startTimer(0)">Intermediate<br>4X5</button>
+			<button id="advanced" onclick="show_advanced();getInput(6,8);startTimer(0)">Advanced <br>6X8</button>
+			<button id="expert" onclick="show_expert();getInput(9,11);startTimer(0)">Expert<br>9X11</button>
+        
+        </div>
+        
+
+        <!-- TABELA -->
+        <div id="rank">
+			<H3>Quadro de Honra</H3>
+		
+        </div>
+        
+
+        <!-- TABULEIRO de Jogo -->
+        <div id="jogo">
+        	<div id="img">
+        		<H3>Quadro de Honra</H3>
+				<table style="width:100%">
+				  <tr>
+					<th></th>
+				    <th>Begginer</th>
+				    <th>Intermediate</th>
+				    <th>Advanced</th>
+					<th>Expert</th>
+					<th>Total</th>
+				  </tr>
+				  <tr>
+				    <td>Bruno</td>
+				    <td>X</td>
+				    <td>X</td>
+				    <td>X</td>
+				    <td>X</td>
+				    <td>X+X+X+X</td>	
+				  </tr>
+				  <tr>
+				    <td>Ricardo</td>
+				    <td>X</td>
+				    <td>X</td>
+				    <td>X</td>
+				    <td>X</td>
+				    <td>X+X+X+X</td>
+				  </tr>
+				  <tr>
+				    <td>Utilizador</td>
+				    <td>X</td>
+				    <td>X</td>
+				    <td>X</td>
+				    <td>X</td>
+				    <td>X+X+X+X</td>
+				  </tr>
+				</table>
+        	</div>
+
+			<div id="tabuleiro_begginer">
+		
+			</div>
+			
+			<div id="tabuleiro_intermediate">
+			
+			</div>
+			
+			<div id="tabuleiro_advanced">
+			
+			</div>
+			
+			<div id="tabuleiro_expert">
+
+			</div>
+        </div>  
+        
+	</body>
+	
+</html>

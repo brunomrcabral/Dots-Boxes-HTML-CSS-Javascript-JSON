@@ -1,0 +1,351 @@
+body{
+	/*background-color: #ff8533	;*/
+	background-color: #8CC63F;
+}
+
+
+H1{
+	font-size: 150%;
+}
+
+H3{
+	text-align: center;
+	font-size: 23px;
+}
+
+H3#m{
+	position:absolute;
+	left: 39%;
+	font-size: 23px;
+}
+
+H3#d{
+	position:absolute;
+	top: 28%;
+	left: 26%;
+	font-size: 23px;
+}
+
+/*---------------------------------------------------------------------------*/
+/*DIV TITLO*/
+#title{
+	position : absolute;
+	/*border: 1px solid green;*/
+	top: 2%;
+	left: 1%;
+	height: 17%;
+	width: 25%;	
+	text-align:center;
+	font-size: 25px;
+	background-color: #bfbfbf;
+	border-radius: 25px;
+	box-shadow: 0px 0px 10px black ;
+}
+
+/*DIV  DIFICULDADE*/
+#dif{
+	position : absolute;
+	/*border: 1px solid red;*/
+	top: 21%;
+	left: 1%;
+	height: 50%;
+	width: 25%;	
+	
+	background-color: #bfbfbf;
+	border-radius: 25px;
+	box-shadow: 0px 0px 10px black ;
+}
+
+/*DIV RANK*/
+
+#rank{
+	position : absolute;
+	/*border: 1px solid red;*/
+	top: 21%;
+	left: 1%;
+	height: 50%;
+	width: 25%;	
+	
+	background-color: #bfbfbf;
+	border-radius: 25px;
+	box-shadow: 0px 0px 10px black ;
+}
+
+#img_working{
+	position: absolute;
+	top : 33%;
+	left: 28%;
+}
+
+/*DIV LOGIN*/
+#login{
+	position : absolute;
+	/*border: 1px solid blue;*/
+	top: 73%;
+	left: 1%;
+	height: 25%;
+	width: 25%;
+	background-color: #bfbfbf;
+	border-radius: 25px;
+	box-shadow: 0px 0px 10px black ;
+}
+
+/*DIV JOGO*/
+#jogo{
+	position : absolute;
+	/*border: 1px solid black;*/
+	top: 2%;
+	left: 27%;
+	height: 96%;
+	width: 72%;
+	background-color: #bfbfbf;
+	border-radius: 25px;
+	box-shadow: 0px 0px 10px black ;
+	text-align:center;	
+}
+
+#img{
+	position : absolute;
+	top: 28%;
+	left: 35%;
+}
+
+
+/*DIV INFORMACAO*/
+#info{
+	position : absolute;
+	/*border: 1px solid pink;*/
+	top: 73%;
+	left: 27%;
+	height: 25%;
+	width: 72%;
+	background-color: #bfbfbf;
+	border-radius: 25px;
+	box-shadow: 0px 0px 10px black ;
+}
+
+/*-------------------TABULEIROS-------------------------------------------------------------*/
+
+#tabuleiro_begginer{
+	position: absolute;
+	top: 33%;
+	left: 42%;
+}
+
+#tabuleiro_intermediate{
+	position: absolute;
+	top: 22%;
+	left: 38%;
+}
+
+#tabuleiro_advanced{
+	position: absolute;
+	top: 7%;
+	left: 29%;
+}
+
+#tabuleiro_expert{
+	position: absolute;
+	top: 0.5%;
+	left: 23%;
+}
+
+
+
+/*--------------CAMPOS LOGIN------------------------------------------------------------------*/
+form input[name="userid"]{
+		position: absolute;
+		top: 4%;
+		left: 17%;
+		margin: 0px;
+		width: 55%;
+		box-shadow: 0px 0px 1px #000 inset;
+		border: 1px solid #000;
+		padding: 12px;
+		color: #444;
+		font-size: 14px;
+		border-radius: 10px;
+}
+
+form input[name="pswrd"]{
+		position: absolute;
+		top: 37%;
+		left: 17%;
+		margin: 0px;
+		width: 55%;
+		box-shadow: 0px 0px 1px #000 inset;
+		border: 1px solid #000;
+		padding: 12px;
+		color: #444;
+		font-size: 14px;
+		border-radius: 10px;
+}
+
+input[type="submit"]{
+	position:absolute;
+	top:71%;
+	left:30%;
+	padding: 10px;
+	width: 38%;
+	margin: 0px;
+	border: 1px solid black;
+	font-weight: bold;
+	border-radius: 50px;
+}
+
+
+/*-----------------------Botao online/Offline-----------------------------------------------------*/
+#online{
+	position:absolute;
+	top: 15%;
+	left:10%;
+	width: 35%;
+	height: 11%;
+	font-weight: bold;
+	font-size: 17px;
+	border-radius: 8px;	
+	color: black;
+	padding: 5px;
+	margin: 5px 5px 5px 5px;
+	border: 0px; 
+	outline: 0px;
+	/*background: inherit;*/
+	background: light grey;
+	box-shadow: 0px 0px 2px black inset;
+	
+}
+
+#offline{
+	position:absolute;
+	top: 15%;
+	left:54%;
+	width: 35%;
+	height: 11%;
+	font-weight: bold;
+	font-size: 17px;
+	border-radius: 8px;
+	color: black;
+	padding: 5px;
+	margin: 5px 5px 5px 5px;
+	border: 0px; 
+	outline: 0px;
+	/*background: inherit;*/
+	background: light grey;
+	box-shadow: 0px 0px 2px black inset;	
+}
+
+#online:hover , #offline:hover{
+	/*box-shadow: 0px 0px 10px #ff8533 inset;*/
+	box-shadow: 0px 0px 10px #8CC63F inset;
+	
+}
+
+
+/*---------------------------BOTAO DIFICULDADE----------------------------------------------------*/
+#begginer{
+	position:absolute;
+	top: 47%;
+	left:10%;
+	width: 35%;
+	height: 16%;
+	font-weight: bold;
+	font-size: 17px;
+	border-radius: 8px;	
+	color: black;
+	padding: 5px;
+	margin: 5px 5px 5px 5px;
+	border: 0px; 
+	outline: 0px;
+	/*background: inherit;*/
+	background: light grey;
+	box-shadow: 0px 0px 2px black inset;	
+}
+
+#intermediate{
+	position:absolute;
+	top: 47%;
+	left:54%;
+	width: 35%;
+	height: 16%;
+	font-weight: bold;
+	font-size: 17px;
+	border-radius: 8px;	
+	color: black;
+	padding: 5px;
+	margin: 5px 5px 5px 5px;
+	border: 0px; 
+	outline: 0px;
+	/*background: inherit;*/
+	background: light grey;
+	box-shadow: 0px 0px 2px black inset;	
+}
+#advanced{
+	position:absolute;
+	top: 69%;
+	left:10%;
+	width: 35%;
+	height: 16%;
+	font-weight: bold;
+	font-size: 17px;
+	border-radius: 8px;	
+	color: black;
+	padding: 5px;
+	margin: 5px 5px 5px 5px;
+	border: 0px; 
+	outline: 0px;
+	/*background: inherit;*/
+	background: light grey;
+	box-shadow: 0px 0px 2px black inset;
+}
+
+#expert{
+	position:absolute;
+	top: 69%;
+	left:54%;
+	width: 35%;
+	height: 16%;
+	font-weight: bold;
+	font-size: 17px;
+	border-radius: 8px;	
+	color: black;
+	padding: 5px;
+	margin: 5px 5px 5px 5px;
+	border: 0px; 
+	outline: 0px;
+	/*background: inherit;*/
+	background: light grey;
+	box-shadow: 0px 0px 2px black inset;	
+}
+
+#begginer:hover , #intermediate:hover, #advanced:hover, #expert:hover, #reset:hover{
+	/*box-shadow: 0px 0px 9px #ff8533 inset;*/
+	box-shadow: 0px 0px 9px #8CC63F inset;
+}
+
+
+/*------------------CAMPOS INFORMACAO---------------------------------------------------*/
+#reset{
+	position:absolute;
+	top: 78%;
+	left:42%;
+	width: 15%;
+	height: 10%;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 8px;	
+	color: black;
+	padding: 5px;
+	margin: 5px 5px 5px 5px;
+	border: 0px; 
+	outline: 0px;
+	/*background: inherit;*/
+	background: light grey;
+	box-shadow: 0px 0px 2px black inset;
+	box-shadow: 0px 0px 10px black ;	
+}
+
+/*--------------------------------------------------------------------------------------------*/
+
+
+
+
